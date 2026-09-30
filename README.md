@@ -27,7 +27,7 @@ The released checkpoint (24.7M parameters) is available on [Hugging Face](https:
 ```python
 from tabwm import TabWM
 
-model = TabWM.from_pretrained("oooranz/TabWM", device="cpu")
+model = TabWM.from_pretrained("oooranz/TabWM")
 ```
 
 ## Inference
