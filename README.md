@@ -22,12 +22,12 @@ Python 3.10+ and PyTorch 2.5+ are required. Use `pip install -e ".[dev]"` to inc
 
 ## Model checkpoint
 
-The released checkpoint (24.7M parameters) is available on Hugging Face and consists of `config.json` and `model.safetensors`. It can be loaded from a local directory or a Hugging Face repository identifier:
+The released checkpoint (24.7M parameters) is available on [Hugging Face](https://huggingface.co/oooranz/TabWM) and consists of `config.json` and `model.safetensors`. It can be loaded from the Hugging Face repository identifier or a local directory:
 
 ```python
 from tabwm import TabWM
 
-model = TabWM.from_pretrained("/path/to/tabwm-model", device="cpu")
+model = TabWM.from_pretrained("oooranz/TabWM", device="cpu")
 ```
 
 ## Inference
@@ -35,7 +35,7 @@ model = TabWM.from_pretrained("/path/to/tabwm-model", device="cpu")
 The example samples a WorldRel world, collects `--k` observed executions as context, and prints the predicted edits for a query action as JSON:
 
 ```bash
-python examples/predict.py /path/to/tabwm-model --world-seed 9000000 --k 16
+python examples/predict.py oooranz/TabWM --world-seed 9000000 --k 16
 ```
 
 ## Training
